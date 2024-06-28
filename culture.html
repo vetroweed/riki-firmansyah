@@ -46,7 +46,8 @@
             <a class="nav-link" href="hotels.html">Hotels</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="booking.html">Booking</a>
+            <a class="nav-link" data-toggle="modal"
+            data-target="#bookingModal">Booking</a>
           </li>
         </ul>
       </div>
@@ -132,7 +133,144 @@
         </div>
       </div>
     </div>
-
+    
+<!-- Modal -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookingModalLabel">Book Your Trip</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container mt-12">
+              <form id="booking-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="destination">Destination</label>
+                      <select
+                        id="destination"
+                        class="form-control"
+                        required
+                        onchange="updateHotelDetails()"
+                      >
+                        <option value="">Select destination</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Borobudur">Borobudur</option>
+                        <option value="Raja Ampat">Raja Ampat</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                        <option value="Komodo">Komodo</option>
+                        <option value="Mount Bromo">Mount Bromo</option>
+                        <option value="Jakarta">Jakarta</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="hotel-details" style="display: none">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="hotel">Hotel</label>
+                      <select id="hotel" class="form-control" required>
+                        <!-- Options will be dynamically populated -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="hotel-info" style="display: none">
+                  <div class="col-md-12">
+                    <h4 id="hotel-name"></h4>
+                    <p id="hotel-details-text"></p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="check-in">Check-in Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="check-in"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="check-out">Check-out Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="check-out"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Additional Message (optional)</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="3"
+                    placeholder="Enter any additional information"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- Footer -->
     <footer class="bg-light text-center py-4">
       <p>
