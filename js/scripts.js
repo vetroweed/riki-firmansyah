@@ -109,7 +109,7 @@ function topFunction() {
 // Prevent form submission
 document.getElementById("booking-form").onsubmit = function (e) {
   e.preventDefault();
-  alert("Booking successful!");
+  alert("Booking successful! Check on Email for Detail !");
 };
 
 // Function to load booking.html into the modal
