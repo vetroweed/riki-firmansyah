@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.img-fluid {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-footer .btn {
+  background-color: #007bff;
+  color: white;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.back-to-top:hover {
+  background-color: #0056b3;
+}
